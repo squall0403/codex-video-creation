@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { random, useVideoConfig } from "remotion";
-import { COLOR_1, COLOR_2 } from "./constants";
+import { OPSWAT_COLORS } from "../theme";
 
 export const Atom = ({ scale }) => {
   const config = useVideoConfig();
@@ -18,8 +18,8 @@ export const Atom = ({ scale }) => {
     >
       <defs>
         <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor={COLOR_1} />
-          <stop offset="100%" stopColor={COLOR_2} />
+          <stop offset="0%" stopColor={OPSWAT_COLORS.navy} />
+          <stop offset="100%" stopColor={OPSWAT_COLORS.teal} />
         </linearGradient>
       </defs>
       <circle

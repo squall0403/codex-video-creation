@@ -1,5 +1,6 @@
 import { interpolate, useCurrentFrame } from "remotion";
-import { COLOR_1, FONT_FAMILY } from "./constants";
+import { OPSWAT_COLORS } from "../theme";
+import { FONT_FAMILY } from "./constants";
 
 const subtitle = {
   fontFamily: FONT_FAMILY,
@@ -11,7 +12,7 @@ const subtitle = {
 };
 
 const codeStyle = {
-  color: COLOR_1,
+  color: OPSWAT_COLORS.navy,
 };
 
 export const Subtitle = () => {

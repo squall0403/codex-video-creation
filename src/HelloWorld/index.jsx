@@ -6,6 +6,7 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
+import { OPSWAT_COLORS } from "../theme";
 import { Logo } from "./Logo";
 import { Subtitle } from "./Subtitle";
 import { Title } from "./Title";
@@ -43,7 +44,7 @@ export const HelloWorld = ({ titleText, titleColor }) => {
 
   // A <AbsoluteFill> is just a absolutely positioned <div>!
   return (
-    <AbsoluteFill style={{ backgroundColor: "white" }}>
+    <AbsoluteFill style={{ backgroundColor: OPSWAT_COLORS.white }}>
       <AbsoluteFill style={{ opacity }}>
         <AbsoluteFill style={{ transform: `translateY(${logoTranslation}px)` }}>
           <Logo />
