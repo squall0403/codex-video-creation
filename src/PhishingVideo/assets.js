@@ -1,10 +1,15 @@
 const WHITE_ICON_ROOT =
-  "icons/Tier 1 - Line Art/PNG - Flat Good for Quick Use/RGB PNG White 500px";
+  "icons/line_art/white";
+const BLUE_ICON_ROOT =
+  "icons/line_art/blue";
+const NAVY_ICON_ROOT =
+  "icons/line_art/navy";
 const ISO_ICON_ROOT =
-  "icons/Tier 3 - 3D Isometric";
+  "icons/iso_metric";
+const BACKGROUND_ROOT = "background";
 
 export const ASSETS = {
-  cursor: "icons/General/Cursor_White.png",
+  cursor: "icons/general/Cursor_White.png",
   logoPrimary:
     "logos/OPSWAT/RGB/OPSWAT_logo_tag-left_blue-white.svg",
   logoSecondary: "logos/OPSWAT/RGB/OPSWAT_logo_notag_white.svg",

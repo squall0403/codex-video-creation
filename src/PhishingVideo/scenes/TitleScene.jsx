@@ -72,14 +72,16 @@ export const TitleScene = () => {
               A familiar message can hide an unfamiliar destination.
             </Interactive.Div>
           </div>
-          <div
+          <div>
+          <Interactive.Div
+            name="Icon Holder"
             style={{
-              width: 320,
               height: 320,
+              width: 320,
               display: "grid",
               placeItems: "center",
               justifySelf: "end",
-              backgroundColor: OPSWAT_COLORS.neutral1000,
+              backgroundColor: OPSWAT_COLORS.blue,
               border: `2px solid ${OPSWAT_COLORS.neutral800}`,
               borderRadius: RADII.large,
               scale: interpolate(frame, [8, 34], [0.85, 1], {
@@ -95,6 +97,7 @@ export const TitleScene = () => {
               size={190}
               name="Anti-phishing shield"
             />
+          </Interactive.Div>
           </div>
         </div>
       </div>

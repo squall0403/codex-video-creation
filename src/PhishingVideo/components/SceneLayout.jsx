@@ -33,7 +33,7 @@ export const GridBackground = ({ animateIn = false }) => {
     : 1;
 
   return (
-    <AbsoluteFill style={{ backgroundColor: SURFACES.canvas, overflow: "hidden" }}>
+    <AbsoluteFill name="Background Grid" style={{ backgroundColor: SURFACES.canvas, overflow: "hidden" }}>
       <div
         style={{
           position: "absolute",
@@ -114,10 +114,10 @@ export const AnimatedTitle = ({ eyebrow, title, align = "left" }) => {
         <Interactive.Div
           name="Scene label"
           style={{
-            color: OPSWAT_COLORS.blueLight,
+            color: OPSWAT_COLORS.blue,
             fontFamily: TYPOGRAPHY.primary,
             fontSize: TYPOGRAPHY.sizes.label,
-            fontWeight: TYPOGRAPHY.weights.medium,
+            fontWeight: TYPOGRAPHY.weights.bold,
             letterSpacing: 2,
             textTransform: "uppercase",
             opacity: interpolate(frame, [0, MOTION.standard], [0, 1], {
@@ -189,7 +189,7 @@ export const SceneLayout = ({
       );
 
   return (
-    <AbsoluteFill style={{ backgroundColor: SURFACES.canvas, overflow: "hidden" }}>
+    <AbsoluteFill name="Scene Background" style={{ backgroundColor: SURFACES.canvas, overflow: "hidden" }}>
       <GridBackground animateIn={animateGrid} />
       <div
         style={{
