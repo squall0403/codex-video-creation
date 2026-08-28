@@ -1,4 +1,10 @@
-import { Easing, interpolate, useCurrentFrame } from "remotion";
+import {
+  Easing,
+  Interactive,
+  interpolate,
+  Sequence,
+  useCurrentFrame,
+} from "remotion";
 import {
   OPSWAT_COLORS,
   RADII,
@@ -10,6 +16,130 @@ import { ASSETS } from "../assets";
 import { BrandIcon, SceneLayout } from "../components/SceneLayout";
 
 const pressurePhrases = ["Act now.", "Verify your account.", "Open this invoice."];
+
+const PressurePhraseContent = ({ phrase, icon }) => (
+  <>
+    <BrandIcon src={icon} size={48} name={`${phrase} icon`} />
+    {phrase}
+  </>
+);
+
+const ActNowPhrase = () => {
+  const frame = useCurrentFrame();
+
+  return (
+    <Interactive.Div
+      name="Act now phrase"
+      style={{
+        minHeight: 104,
+        display: "flex",
+        alignItems: "center",
+        gap: SPACING.md,
+        padding: `${SPACING.md}px ${SPACING.lg}px`,
+        backgroundColor: SURFACES.panel,
+        border: `2px solid ${OPSWAT_COLORS.warning}`,
+        borderRadius: RADII.medium,
+        color: SURFACES.text,
+        fontFamily: TYPOGRAPHY.primary,
+        fontSize: 42,
+        fontWeight: TYPOGRAPHY.weights.bold,
+        opacity: interpolate(frame, [0, 16], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+          easing: Easing.bezier(0.16, 1, 0.3, 1),
+        }),
+        translate: interpolate(frame, [0, 22], ["-60px 0px", "0px 0px"], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+          easing: Easing.bezier(0.16, 1, 0.3, 1),
+        }),
+      }}
+    >
+      <PressurePhraseContent
+        phrase={pressurePhrases[0]}
+        icon={ASSETS.icons.warning}
+      />
+    </Interactive.Div>
+  );
+};
+
+const VerifyAccountPhrase = () => {
+  const frame = useCurrentFrame();
+
+  return (
+    <Interactive.Div
+      name="Verify your account phrase"
+      style={{
+        minHeight: 104,
+        display: "flex",
+        alignItems: "center",
+        gap: SPACING.md,
+        padding: `${SPACING.md}px ${SPACING.lg}px`,
+        backgroundColor: SURFACES.panel,
+        border: `2px solid ${SURFACES.panelBorder}`,
+        borderRadius: RADII.medium,
+        color: SURFACES.text,
+        fontFamily: TYPOGRAPHY.primary,
+        fontSize: 42,
+        fontWeight: TYPOGRAPHY.weights.bold,
+        opacity: interpolate(frame, [0, 16], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+          easing: Easing.bezier(0.16, 1, 0.3, 1),
+        }),
+        translate: interpolate(frame, [0, 22], ["-60px 0px", "0px 0px"], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+          easing: Easing.bezier(0.16, 1, 0.3, 1),
+        }),
+      }}
+    >
+      <PressurePhraseContent
+        phrase={pressurePhrases[1]}
+        icon={ASSETS.icons.warning}
+      />
+    </Interactive.Div>
+  );
+};
+
+const OpenInvoicePhrase = () => {
+  const frame = useCurrentFrame();
+
+  return (
+    <Interactive.Div
+      name="Open this invoice phrase"
+      style={{
+        minHeight: 104,
+        display: "flex",
+        alignItems: "center",
+        gap: SPACING.md,
+        padding: `${SPACING.md}px ${SPACING.lg}px`,
+        backgroundColor: SURFACES.panel,
+        border: `2px solid ${SURFACES.panelBorder}`,
+        borderRadius: RADII.medium,
+        color: SURFACES.text,
+        fontFamily: TYPOGRAPHY.primary,
+        fontSize: 42,
+        fontWeight: TYPOGRAPHY.weights.bold,
+        opacity: interpolate(frame, [0, 16], [0, 1], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+          easing: Easing.bezier(0.16, 1, 0.3, 1),
+        }),
+        translate: interpolate(frame, [0, 22], ["-60px 0px", "0px 0px"], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+          easing: Easing.bezier(0.16, 1, 0.3, 1),
+        }),
+      }}
+    >
+      <PressurePhraseContent
+        phrase={pressurePhrases[2]}
+        icon={ASSETS.icons.document}
+      />
+    </Interactive.Div>
+  );
+};
 
 export const UrgencyScene = () => {
   const frame = useCurrentFrame();
@@ -27,47 +157,30 @@ export const UrgencyScene = () => {
         }}
       >
         <div style={{ display: "grid", gap: SPACING.md }}>
-          {pressurePhrases.map((phrase, index) => (
-            <div
-              key={phrase}
-              style={{
-                minHeight: 104,
-                display: "flex",
-                alignItems: "center",
-                gap: SPACING.md,
-                padding: `${SPACING.md}px ${SPACING.lg}px`,
-                backgroundColor: SURFACES.panel,
-                border: `2px solid ${index === 0 ? OPSWAT_COLORS.warning : SURFACES.panelBorder}`,
-                borderRadius: RADII.medium,
-                color: SURFACES.text,
-                fontFamily: TYPOGRAPHY.primary,
-                fontSize: 42,
-                fontWeight: TYPOGRAPHY.weights.bold,
-                opacity: interpolate(frame, [20 + index * 28, 36 + index * 28], [0, 1], {
-                  extrapolateLeft: "clamp",
-                  extrapolateRight: "clamp",
-                  easing: Easing.bezier(0.16, 1, 0.3, 1),
-                }),
-                translate: interpolate(
-                  frame,
-                  [20 + index * 28, 42 + index * 28],
-                  ["-60px 0px", "0px 0px"],
-                  {
-                    extrapolateLeft: "clamp",
-                    extrapolateRight: "clamp",
-                    easing: Easing.bezier(0.16, 1, 0.3, 1),
-                  },
-                ),
-              }}
-            >
-              <BrandIcon
-                src={index === 2 ? ASSETS.icons.document : ASSETS.icons.warning}
-                size={48}
-                name={`${phrase} icon`}
-              />
-              {phrase}
-            </div>
-          ))}
+          <Sequence
+              name="Pressure 01 - Act now"
+              from={20}
+              durationInFrames={234}
+            layout="none"
+          >
+            <ActNowPhrase />
+          </Sequence>
+          <Sequence
+              name="Pressure 02 - Verify your account"
+              from={48}
+              durationInFrames={206}
+            layout="none"
+          >
+            <VerifyAccountPhrase />
+          </Sequence>
+          <Sequence
+              name="Pressure 03 - Open this invoice"
+              from={76}
+              durationInFrames={178}
+            layout="none"
+          >
+            <OpenInvoicePhrase />
+          </Sequence>
         </div>
         <div
           style={{
@@ -110,4 +223,3 @@ export const UrgencyScene = () => {
     </SceneLayout>
   );
 };
-

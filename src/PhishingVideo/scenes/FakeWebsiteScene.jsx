@@ -20,11 +20,6 @@ import {
 
 export const FakeWebsiteScene = () => {
   const frame = useCurrentFrame();
-  const cursorProgress = interpolate(frame, [30, 120], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-    easing: Easing.bezier(0.16, 1, 0.3, 1),
-  });
 
   return (
     <SceneLayout eyebrow="The malicious link" title="The page can look right while the address is wrong.">
@@ -32,12 +27,12 @@ export const FakeWebsiteScene = () => {
         <BrowserWindow suspicious>
           <LoginForm />
         </BrowserWindow>
-        <Cursor progress={cursorProgress} />
+        <Cursor/>
         <div
           style={{
             position: "absolute",
             right: SPACING.lg,
-            bottom: SPACING.lg,
+            bottom: -18,
             display: "flex",
             gap: SPACING.md,
             opacity: interpolate(frame, [126, 154], [0, 1], {

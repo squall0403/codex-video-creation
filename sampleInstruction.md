@@ -165,7 +165,7 @@ Requirements:
 * Do not use TypeScript syntax.
 * Preserve working project configuration.
 * Adapt to existing entry points instead of creating duplicates.
-* Register the composition with ID `PhishingVideo`.
+* Register the composition with ID [`PhishingVideo`].
 * Use 1920 × 1080 at 30 fps.
 * Use the approved total frame count.
 
@@ -216,6 +216,8 @@ For each scene:
 * Avoid unnecessary animation overshoot.
 * Avoid flashing, camera shake, and excessive bounce.
 * Avoid decorative motion that does not support learning.
+* Every component need to be editable on remotion studio (when running with npm run dev).
+* Every component that has animation need to be editatble on remotion video by using keyframe linked to that animation.
 
 Use normal data movement in blue or teal. Transition to orange when activity becomes suspicious and red only for confirmed compromise. Pair every status color with an icon, label, or shape.
 

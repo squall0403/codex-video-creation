@@ -36,6 +36,7 @@ export const TYPOGRAPHY = {
     impact: 96,
     headline: 58,
     body: 34,
+    caption: 38,
     label: 26,
     detail: 24,
   },
@@ -43,6 +44,11 @@ export const TYPOGRAPHY = {
 
 // Project-specific layout tokens.
 export const SAFE_AREA = 120;
+
+export const CAPTION_LAYOUT = {
+  maxWidth: 1440,
+  reservedSpace: 88,
+};
 
 export const SPACING = {
   xs: 8,

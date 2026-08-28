@@ -30,7 +30,7 @@ export const CredentialTheftScene = () => {
           alignItems: "center",
         }}
       >
-        <Panel style={{ height: 430, padding: SPACING.md }}>
+        <Panel style={{ height: 500, padding: SPACING.md }}>
           <LoginForm compromised />
         </Panel>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>

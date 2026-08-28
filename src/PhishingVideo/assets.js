@@ -1,12 +1,7 @@
 const WHITE_ICON_ROOT =
   "icons/line_art/white";
-const BLUE_ICON_ROOT =
-  "icons/line_art/blue";
-const NAVY_ICON_ROOT =
-  "icons/line_art/navy";
 const ISO_ICON_ROOT =
   "icons/iso_metric";
-const BACKGROUND_ROOT = "background";
 
 export const ASSETS = {
   cursor: "icons/general/Cursor_White.png",

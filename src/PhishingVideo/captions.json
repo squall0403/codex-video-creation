@@ -1,0 +1,163 @@
+[
+  {
+    "text": "It can begin with an ordinary-looking email:",
+    "startMs": 0,
+    "endMs": 2789,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "a delivery notice, a password warning,",
+    "startMs": 2789,
+    "endMs": 5250,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "or an urgent message from your manager.",
+    "startMs": 5250,
+    "endMs": 7713,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "But the sender isn’t who they claim to be.",
+    "startMs": 7713,
+    "endMs": 10202,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "An attacker has copied a familiar logo and writing style,",
+    "startMs": 10202,
+    "endMs": 15791,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "and email layout to earn your trust.",
+    "startMs": 15791,
+    "endMs": 18837,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "The message creates pressure.",
+    "startMs": 18837,
+    "endMs": 20359,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Act now. Verify your account. Open this invoice.",
+    "startMs": 20359,
+    "endMs": 22102,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "That urgency is designed to make you react before you think.",
+    "startMs": 22102,
+    "endMs": 25948,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "When you select the link, it may open a fake website",
+    "startMs": 25948,
+    "endMs": 28500,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "that looks almost identical to a genuine sign-in page.",
+    "startMs": 28500,
+    "endMs": 32281,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "If you enter your username, password, or verification code,",
+    "startMs": 32281,
+    "endMs": 35959,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "the information is sent directly to the attacker.",
+    "startMs": 35959,
+    "endMs": 39094,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "The attacker may then access your email,",
+    "startMs": 39094,
+    "endMs": 41275,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "steal sensitive information,",
+    "startMs": 41275,
+    "endMs": 43023,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "impersonate you,",
+    "startMs": 43023,
+    "endMs": 44283,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "or use your account to target other employees.",
+    "startMs": 44283,
+    "endMs": 47484,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Before responding, pause and inspect the message.",
+    "startMs": 47484,
+    "endMs": 50765,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Check the sender’s full address,",
+    "startMs": 50765,
+    "endMs": 52558,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "hover over links,",
+    "startMs": 52558,
+    "endMs": 53859,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "and be cautious of unexpected requests or urgent language.",
+    "startMs": 53859,
+    "endMs": 57820,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "When something feels suspicious, don’t interact with it.",
+    "startMs": 57820,
+    "endMs": 61216,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": "Report it through your organization’s approved security channel.",
+    "startMs": 61216,
+    "endMs": 63896,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

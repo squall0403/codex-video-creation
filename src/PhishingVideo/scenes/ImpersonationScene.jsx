@@ -96,7 +96,7 @@ export const ImpersonationScene = () => {
             <div>Copied writing style</div>
             <div>Matching email layout</div>
           </div>
-          <div style={{ marginTop: SPACING.xl }}>
+          <div style={{ marginTop: SPACING.lg }}>
             <StatusBadge
               icon={ASSETS.icons.phishing}
               label="Identity does not match"

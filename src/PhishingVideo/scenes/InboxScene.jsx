@@ -1,4 +1,4 @@
-import { Easing, interpolate, useCurrentFrame } from "remotion";
+import { Easing, Interactive, interpolate, useCurrentFrame } from "remotion";
 import {
   OPSWAT_COLORS,
   RADII,
@@ -8,12 +8,6 @@ import {
 } from "../../theme";
 import { EmailCard } from "../components/EmailCard";
 import { SceneLayout, SectionLabel } from "../components/SceneLayout";
-
-const inboxItems = [
-  ["Facilities", "Badge access update"],
-  ["ParcelTrack", "Delivery attempt missed"],
-  ["Manager", "Quick request"],
-];
 
 export const InboxScene = () => {
   const frame = useCurrentFrame();
@@ -43,26 +37,77 @@ export const InboxScene = () => {
         >
           <SectionLabel>Inbox · 3 new</SectionLabel>
           <div style={{ marginTop: SPACING.md }}>
-            {inboxItems.map(([sender, subject], index) => (
+            <Interactive.Div
+              name="Facilities inbox row"
+              style={{
+                padding: `${SPACING.md}px ${SPACING.sm}px`,
+                backgroundColor: OPSWAT_COLORS.neutral1000,
+                color: SURFACES.text,
+                fontFamily: TYPOGRAPHY.primary,
+              }}
+            >
+              <div style={{ fontSize: 28, fontWeight: TYPOGRAPHY.weights.bold }}>
+                Facilities
+              </div>
               <div
-                key={sender}
                 style={{
-                  padding: `${SPACING.md}px ${SPACING.sm}px`,
-                  borderTop: index === 0 ? "none" : `2px solid ${SURFACES.panelBorder}`,
-                  backgroundColor:
-                    index === 1 && frame > 55
-                      ? OPSWAT_COLORS.neutral900
-                      : OPSWAT_COLORS.neutral1000,
-                  color: SURFACES.text,
-                  fontFamily: TYPOGRAPHY.primary,
+                  marginTop: SPACING.xs,
+                  color: OPSWAT_COLORS.neutral300,
+                  fontSize: 25,
                 }}
               >
-                <div style={{ fontSize: 28, fontWeight: TYPOGRAPHY.weights.bold }}>{sender}</div>
-                <div style={{ marginTop: SPACING.xs, color: OPSWAT_COLORS.neutral300, fontSize: 25 }}>
-                  {subject}
-                </div>
+                Badge access update
               </div>
-            ))}
+            </Interactive.Div>
+            <Interactive.Div
+              name="ParcelTrack inbox row"
+              style={{
+                padding: `${SPACING.md}px ${SPACING.sm}px`,
+                borderTop: `2px solid ${SURFACES.panelBorder}`,
+                backgroundColor:
+                  frame > 55
+                    ? OPSWAT_COLORS.neutral900
+                    : OPSWAT_COLORS.neutral1000,
+                color: SURFACES.text,
+                fontFamily: TYPOGRAPHY.primary,
+              }}
+            >
+              <div style={{ fontSize: 28, fontWeight: TYPOGRAPHY.weights.bold }}>
+                ParcelTrack
+              </div>
+              <div
+                style={{
+                  marginTop: SPACING.xs,
+                  color: OPSWAT_COLORS.neutral300,
+                  fontSize: 25,
+                }}
+              >
+                Delivery attempt missed
+              </div>
+            </Interactive.Div>
+            <Interactive.Div
+              name="Manager inbox row"
+              style={{
+                padding: `${SPACING.md}px ${SPACING.sm}px`,
+                borderTop: `2px solid ${SURFACES.panelBorder}`,
+                backgroundColor: OPSWAT_COLORS.neutral1000,
+                color: SURFACES.text,
+                fontFamily: TYPOGRAPHY.primary,
+              }}
+            >
+              <div style={{ fontSize: 28, fontWeight: TYPOGRAPHY.weights.bold }}>
+                Manager
+              </div>
+              <div
+                style={{
+                  marginTop: SPACING.xs,
+                  color: OPSWAT_COLORS.neutral300,
+                  fontSize: 25,
+                }}
+              >
+                Quick request
+              </div>
+            </Interactive.Div>
           </div>
         </div>
         <EmailCard />
@@ -70,4 +115,3 @@ export const InboxScene = () => {
     </SceneLayout>
   );
 };
-

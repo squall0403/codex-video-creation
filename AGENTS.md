@@ -41,8 +41,8 @@ Do not load unrelated skills.
 
 ## Project
 
-This repository contains a 90-second OPSWAT-branded phishing-awareness
-motion graphic built with Remotion, React, JavaScript, and JSX.
+This repository contains a OPSWAT-branded
+motion graphic video built with Remotion, React, JavaScript, and JSX.
 
 ## Required references
 
@@ -51,10 +51,8 @@ caption, logo treatment, or theme:
 
 1. Read `./OPSWAT_BRAND_GUIDE.md` completely.
 2. Follow its color, typography, logo, accessibility, voice, and motion rules.
-3. Treat the official OPSWAT Brand Hub and official supplied assets as the
-   ultimate source of truth.
-4. If a request conflicts with the brand guide, identify the conflict before
-   implementing it.
+3. Treat the official OPSWAT Brand Hub and official supplied assets as the ultimate source of truth.
+4. If a request conflicts with the brand guide, identify the conflict before implementing it.
 
 ## Technical requirements
 

@@ -24,7 +24,7 @@ export const BrowserWindow = ({ suspicious = true, children }) => {
     <Interactive.Div
       name="Browser window"
       style={{
-        height: "100%",
+        height: "110%",
         overflow: "hidden",
         backgroundColor: SURFACES.panel,
         border: `2px solid ${SURFACES.panelBorder}`,
@@ -34,11 +34,16 @@ export const BrowserWindow = ({ suspicious = true, children }) => {
           extrapolateRight: "clamp",
           easing: Easing.bezier(0.16, 1, 0.3, 1),
         }),
-        translate: interpolate(frame, [0, MOTION.deliberate], ["60px 0px", "0px 0px"], {
-          extrapolateLeft: "clamp",
-          extrapolateRight: "clamp",
-          easing: Easing.bezier(0.16, 1, 0.3, 1),
-        }),
+        translate: interpolate(
+          frame,
+          [0, MOTION.deliberate],
+          ["60px 0px", "0px 0px"],
+          {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+            easing: Easing.bezier(0.16, 1, 0.3, 1),
+          },
+        ),
       }}
     >
       <div
@@ -91,7 +96,9 @@ export const BrowserWindow = ({ suspicious = true, children }) => {
             : "accounts.example.com"}
         </div>
       </div>
-      <div style={{ height: "calc(100% - 84px)", padding: SPACING.lg }}>{children}</div>
+      <div style={{ height: "calc(100% - 84px)", padding: SPACING.lg }}>
+        {children}
+      </div>
     </Interactive.Div>
   );
 };
@@ -109,27 +116,48 @@ export const LoginForm = ({ compromised = false }) => (
       fontFamily: TYPOGRAPHY.primary,
     }}
   >
-    <div style={{ fontSize: 42, fontWeight: TYPOGRAPHY.weights.bold }}>Sign in to continue</div>
-    <div style={{ marginTop: SPACING.sm, color: OPSWAT_COLORS.neutral300, fontSize: 26 }}>
+    <div style={{ fontSize: 42, fontWeight: TYPOGRAPHY.weights.bold }}>
+      Sign in to continue
+    </div>
+    <div
+      style={{
+        marginTop: SPACING.sm,
+        color: OPSWAT_COLORS.neutral300,
+        fontSize: 26,
+      }}
+    >
       Confirm your account to review the request.
     </div>
-    {["alex@company.example", "••••••••••••"].map((value, index) => (
-      <div
-        key={value}
-        style={{
-          marginTop: SPACING.md,
-          padding: `${SPACING.sm}px ${SPACING.md}px`,
-          border: `2px solid ${index === 1 && compromised ? OPSWAT_COLORS.warning : OPSWAT_COLORS.neutral800}`,
-          borderRadius: RADII.small,
-          backgroundColor: OPSWAT_COLORS.neutral900,
-          color: index === 1 ? OPSWAT_COLORS.white : OPSWAT_COLORS.neutral300,
-          fontFamily: index === 1 ? TYPOGRAPHY.mono : TYPOGRAPHY.primary,
-          fontSize: 28,
-        }}
-      >
-        {value}
-      </div>
-    ))}
+    <Interactive.Div
+      name="Username field"
+      style={{
+        marginTop: SPACING.md,
+        padding: `${SPACING.sm}px ${SPACING.md}px`,
+        border: `2px solid ${OPSWAT_COLORS.neutral800}`,
+        borderRadius: RADII.small,
+        backgroundColor: OPSWAT_COLORS.neutral900,
+        color: OPSWAT_COLORS.neutral300,
+        fontFamily: TYPOGRAPHY.primary,
+        fontSize: 28,
+      }}
+    >
+      alex@company.example
+    </Interactive.Div>
+    <Interactive.Div
+      name="Password field"
+      style={{
+        marginTop: SPACING.md,
+        padding: `${SPACING.sm}px ${SPACING.md}px`,
+        border: `2px solid ${compromised ? OPSWAT_COLORS.warning : OPSWAT_COLORS.neutral800}`,
+        borderRadius: RADII.small,
+        backgroundColor: OPSWAT_COLORS.neutral900,
+        color: OPSWAT_COLORS.white,
+        fontFamily: TYPOGRAPHY.mono,
+        fontSize: 28,
+      }}
+    >
+      ••••••••••••
+    </Interactive.Div>
     <div
       style={{
         marginTop: SPACING.lg,
@@ -147,18 +175,29 @@ export const LoginForm = ({ compromised = false }) => (
   </div>
 );
 
-export const Cursor = ({ progress }) => (
-  <Img
-    name="Mouse cursor"
-    src={staticFile(ASSETS.cursor)}
-    style={{
-      position: "absolute",
-      left: `${24 + progress * 52}%`,
-      top: `${70 - progress * 32}%`,
-      width: 72,
-      height: 72,
-      objectFit: "contain",
-    }}
-    hidden
-  />
-);
+export const Cursor = ({ }) => {
+  const frame = useCurrentFrame();
+
+  return (
+    <Img
+      name="Mouse cursor"
+      src={staticFile(ASSETS.cursor)}
+      style={{
+        position: "absolute",
+        width: 50,
+        height: 50,
+        objectFit: "contain",
+        translate: interpolate(
+          frame,
+          [0, 120],
+          ["143px -377.5px", "701.6px -55.3px"],
+          {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+            easing: Easing.bezier(0.16, 1, 0.3, 1),
+          },
+        ),
+      }}
+    />
+  );
+};

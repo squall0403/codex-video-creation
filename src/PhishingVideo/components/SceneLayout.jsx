@@ -9,6 +9,7 @@ import {
   useVideoConfig,
 } from "remotion";
 import {
+  CAPTION_LAYOUT,
   MOTION,
   OPSWAT_COLORS,
   RADII,
@@ -197,6 +198,7 @@ export const SceneLayout = ({
           inset: SAFE_AREA,
           display: "flex",
           flexDirection: "column",
+          paddingBottom: CAPTION_LAYOUT.reservedSpace,
           opacity: sceneOpacity,
         }}
       >
