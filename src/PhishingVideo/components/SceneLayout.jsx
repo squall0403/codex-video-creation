@@ -218,7 +218,7 @@ export const SceneLayout = ({
 };
 
 export const Panel = ({ children, style = {} }) => (
-  <div
+  <Interactive.Div name="Panel"
     style={{
       backgroundColor: SURFACES.panel,
       border: `2px solid ${SURFACES.panelBorder}`,
@@ -228,7 +228,7 @@ export const Panel = ({ children, style = {} }) => (
     }}
   >
     {children}
-  </div>
+  </Interactive.Div>
 );
 
 export const StatusBadge = ({ icon, label, color = OPSWAT_COLORS.blueLight }) => (

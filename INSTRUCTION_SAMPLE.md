@@ -1,3 +1,131 @@
+# Prompt 0 — Build the storyboard and Script
+
+Use the `.agents/skills/opswat-academy-content-writer/SKILL.md` skill for this task.
+
+Create a complete motion-graphics content package based on the source material below.
+
+## Project information
+
+* Topic: [INSERT TOPIC]
+* Target audience: [INSERT AUDIENCE AND KNOWLEDGE LEVEL]
+(
+AssociateBeginners, students, junior IT/security staffFoundational; little or no prior experience
+ProfessionalOPSWAT customers, partners and system administratorsIntermediate–advanced, product-specific and hands-on
+ExpertExperienced cybersecurity and CIP practitionersAdvanced, in-depth cybersecurity and Critical Infrastructure Protection
+)
+* Target duration: [FOR EXAMPLE: 2–3 MINUTES]
+* Video format: 16:9 MOTION-GRAPHICS VIDEO
+* Learning context: [COURSE, LESSON, MODULE, PRODUCT TRAINING, ETC.]
+* Desired learner action: [WHAT SHOULD LEARNERS UNDERSTAND OR DO?]
+
+## Learning objective
+
+By the end of this video, the learner should be able to:
+
+[INSERT AN OBSERVABLE LEARNING OBJECTIVE]
+
+If this objective is unclear or too broad, improve it before creating the storyboard.
+
+## Source content
+
+Use the following material as the factual source of truth:
+
+[PASTE THE SOURCE CONTENT HERE OR PROVIDE THE RELEVANT FILE PATHS]
+
+## Mandatory content
+
+Include these points:
+
+* [REQUIRED POINT 1]
+* [REQUIRED POINT 2]
+* [REQUIRED POINT 3]
+
+Use these terms exactly:
+
+* [OFFICIAL TERM OR PRODUCT NAME]
+* [OFFICIAL TERM OR PRODUCT NAME]
+
+## Content requirements
+
+1. Follow the OPSWAT Academy voice, tone, brand context, and source-integrity rules defined in the skill.
+2. Create an engaging educational story rather than simply summarizing the source.
+3. Choose the story structure that best supports the learning objective.
+4. Simplify technical concepts without changing their meaning.
+5. Do not invent statistics, product capabilities, technical behavior, customer examples, compliance requirements, or research findings.
+6. Clearly flag anything that requires verification or additional source material.
+7. Keep the tone authoritative, practical, approachable, and learner-centered.
+8. Avoid fear-based messaging and overly promotional language.
+9. Use “Trust no file. Trust no device.™” only if it genuinely supports the lesson.
+10. Make the visual directions specific enough for a motion designer or video-development agent to implement.
+
+## Expected output
+
+Produce the following sections:
+
+### 1. Creative brief
+
+Include:
+
+* Working title
+* Target audience
+* Learning objective
+* Core message
+* Proposed duration
+* Chosen story structure
+* Important production assumptions
+
+### 2. Motion-graphics storyboard
+
+Create a timed Markdown table containing:
+
+| Scene | Time | Narration | On-screen text | Visual direction | Motion / transition | Audio notes |
+| ----- | ---- | --------- | -------------- | ---------------- | ------------------- | ----------- |
+
+Requirements:
+
+* Use continuous timestamps.
+* Make the total timing match the target duration.
+* Give every scene one dominant communication goal.
+* Keep on-screen text concise.
+* Do not duplicate the complete narration as on-screen text.
+* Clearly distinguish conceptual animation from an actual product demonstration.
+* Describe what appears, moves, changes, connects, highlights, and exits.
+* Mark scenes requiring actual product screenshots or brand assets.
+
+### 3. Voiceover-ready narration
+
+Provide the complete narration as a clean, continuous script.
+
+* Remove visual and production instructions.
+* Add only essential delivery cues.
+* Use natural spoken language.
+* Include pronunciation guidance for unusual technical or product terms.
+* Ensure the narration fits the target duration.
+
+### 4. Timing summary
+
+Include:
+
+* Narration word count
+* Assumed speaking rate
+* Estimated spoken duration
+* Time allocated for visual pauses and transitions
+* Final estimated video duration
+
+### 5. Source and review notes
+
+List:
+
+* Assumptions made
+* Claims requiring verification
+* Missing information
+* Terminology questions
+* Product screenshots, brand assets, or references needed
+* Optional improvements for a future revision
+
+Before delivering the result, review it against the quality checklist in the skill.
+
+
 # Prompt 1 — Inspect and plan
 
 You are working inside an existing Remotion project for an OPSWAT-branded [cybersecurity awareness] video.
@@ -90,8 +218,8 @@ Convert the storyboard timing to frames at 30 fps.
 
 The target is approximately:
 
-* 90 seconds
-* 2,700 frames
+* [90] seconds
+* [2,700] frames
 * 1920 × 1080
 * 30 fps
 
@@ -217,7 +345,7 @@ For each scene:
 * Avoid flashing, camera shake, and excessive bounce.
 * Avoid decorative motion that does not support learning.
 * Every component need to be editable on remotion studio (when running with npm run dev).
-* Every component that has animation need to be editatble on remotion video by using keyframe linked to that animation.
+* Every component that has animation need to be editatble on remotion studio by using keyframe linked to that animation.
 
 Use normal data movement in blue or teal. Transition to orange when activity becomes suspicious and red only for confirmed compromise. Pair every status color with an icon, label, or shape.
 
@@ -337,7 +465,7 @@ After validation:
 
 3. Use this output path:
 
-   `out/opswat-phishing-awareness.mp4`
+   `out/[opswat-phishing-awareness].mp4`
 
 4. Do not overwrite an existing final video without reporting it.
 

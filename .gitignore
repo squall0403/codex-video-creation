@@ -3,5 +3,6 @@ dist
 .DS_Store
 .env
 .agents
+.claude
 build
 out
