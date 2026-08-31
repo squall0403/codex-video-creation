@@ -31,7 +31,6 @@ export const CaptionOverlay = () => {
         padding: `0 ${SAFE_AREA}px ${SAFE_AREA}px`,
         pointerEvents: "none",
       }}
-      hidden
     >
       <Interactive.Div
         name="Current caption"
@@ -52,6 +51,7 @@ export const CaptionOverlay = () => {
           lineHeight: 1.3,
           textAlign: "center",
         }}
+        hidden
       >
         {caption.text}
       </Interactive.Div>
